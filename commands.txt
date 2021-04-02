@@ -1,0 +1,33 @@
+
+Запуск кластера:
+minikube start
+
+Переключение докера на демон в кубере:
+eval $(minikube -p minikube docker-env)
+
+Собрать образы:
+docker build DOCKERFILE -t TAG
+
+Создать деплойменты:
+kubectl create deployment NAME --image=IMAGE
+
+Создать сервисы:
+kubectl expose deployment NAME --port=PORT --type=LoadBalancer/NodePort
+
+minikube tunnel
+
+Сделать локально доступным:
+minikube service NAME 
+
+
+Для повторного запуска:
+minikube start
+minikube service NAME
+Ну и запуск client   
+
+
+Для увеличения количества кластеров:
+kubectl scale deployment NAME --replicas=COUNT 
+
+Для вызова дашборда
+minikube dashboard

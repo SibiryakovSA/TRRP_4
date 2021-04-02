@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Answer {
+  bytes image = 1;
+  bool ok = 2;
+  string message = 3;
+}
+message Point {
+  uint32 x = 1;
+  uint32 y = 2;
+}
+message Crop {
+  bytes image = 1;
+  Point topLeft = 2;
+  Point bottomRight = 3;
+}
